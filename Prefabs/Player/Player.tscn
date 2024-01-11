@@ -1,0 +1,125 @@
+[gd_scene load_steps=22 format=3 uid="uid://c6m57chxuwjyx"]
+
+[ext_resource type="Script" path="res://Prefabs/Player/Player.gd" id="1_8ld4n"]
+[ext_resource type="Texture2D" uid="uid://1fljdft7r6wy" path="res://Sprites/Player/Death0.png" id="2_hdupf"]
+[ext_resource type="Texture2D" uid="uid://dtcs5pvpb0mf5" path="res://Sprites/Player/DeathA.png" id="3_h2qcy"]
+[ext_resource type="Texture2D" uid="uid://b4lil5jiujk62" path="res://Sprites/Player/DeathB.png" id="4_a0pf8"]
+[ext_resource type="Texture2D" uid="uid://ccftpcacvjkc0" path="res://Sprites/Player/DeathC.png" id="5_v2obp"]
+[ext_resource type="Texture2D" uid="uid://vheeypdjywyc" path="res://Sprites/Player/DeathD.png" id="6_qijan"]
+[ext_resource type="Texture2D" uid="uid://i5d30foknx6x" path="res://Sprites/Player/DeathE.png" id="7_if0h3"]
+[ext_resource type="Texture2D" uid="uid://bmq1yxrh6vawa" path="res://Sprites/Player/DeathF.png" id="8_awk63"]
+[ext_resource type="Texture2D" uid="uid://1ajyrv1kx2j5" path="res://Sprites/Player/DeathG.png" id="9_kbpmq"]
+[ext_resource type="Texture2D" uid="uid://cv5f7wneiyh2t" path="res://Sprites/Player/DeathH.png" id="10_b2jf7"]
+[ext_resource type="Texture2D" uid="uid://bua5hcaosggyp" path="res://Sprites/Player/DeathI.png" id="11_sbe6q"]
+[ext_resource type="Texture2D" uid="uid://d10a4axisp7rm" path="res://Sprites/Player/DeathJ.png" id="12_onp1w"]
+[ext_resource type="Texture2D" uid="uid://b1vt0271o51gp" path="res://Sprites/Player/DeathK.png" id="13_ddia3"]
+[ext_resource type="Texture2D" uid="uid://dd6l87sy4q26h" path="res://Sprites/Player/Empty.png" id="14_7tuwt"]
+[ext_resource type="Texture2D" uid="uid://b1ncxcsfw03vg" path="res://Sprites/Player/L1.png" id="15_8v802"]
+[ext_resource type="Texture2D" uid="uid://dvd15idnigyw5" path="res://Sprites/Player/L2.png" id="16_8up87"]
+[ext_resource type="Texture2D" uid="uid://78rk6bf51amm" path="res://Sprites/Player/R1.png" id="17_d0w2v"]
+[ext_resource type="Texture2D" uid="uid://3s2iapmdhqc0" path="res://Sprites/Player/R2.png" id="18_8o4gg"]
+[ext_resource type="PackedScene" uid="uid://b7nhqsarot7x6" path="res://Prefabs/Environment/WorldWrapper.tscn" id="19_7t7om"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwoy2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hdupf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h2qcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a0pf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_v2obp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qijan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_if0h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_awk63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kbpmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_b2jf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sbe6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_onp1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ddia3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7tuwt")
+}],
+"loop": false,
+"name": &"PlayerDeath",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_8v802")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8up87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hdupf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8up87")
+}],
+"loop": true,
+"name": &"PlayerL",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_d0w2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8o4gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hdupf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8o4gg")
+}],
+"loop": true,
+"name": &"PlayerR",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ih7fx"]
+custom_solver_bias = 1.0
+radius = 6.5
+
+[node name="Player" type="Area2D"]
+position = Vector2(65, 84)
+script = ExtResource("1_8ld4n")
+Speed = 50.0
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 1)
+sprite_frames = SubResource("SpriteFrames_fwoy2")
+animation = &"PlayerR"
+autoplay = "PlayerR"
+frame_progress = 0.211896
+
+[node name="CollisionCircle" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0.5)
+shape = SubResource("CircleShape2D_ih7fx")
+
+[node name="WorldWrapper" parent="." instance=ExtResource("19_7t7om")]
+position = Vector2(-65, -84)

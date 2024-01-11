@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cldw6i6xeq5mk"
+path="res://.godot/imported/munch B.ogg-fb51bb0d4ef0572de4f257da12f9b9cb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/munch B.ogg"
+dest_files=["res://.godot/imported/munch B.ogg-fb51bb0d4ef0572de4f257da12f9b9cb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

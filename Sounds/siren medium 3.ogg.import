@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crq0rngr8b67d"
+path="res://.godot/imported/siren medium 3.ogg-e257ed803149de11a3b4b295b3468cac.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/siren medium 3.ogg"
+dest_files=["res://.godot/imported/siren medium 3.ogg-e257ed803149de11a3b4b295b3468cac.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

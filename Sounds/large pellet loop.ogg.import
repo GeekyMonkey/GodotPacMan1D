@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://jgu4d7gc4lv7"
+path="res://.godot/imported/large pellet loop.ogg-94880d0e0cb556296aea2596d06b78dc.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/large pellet loop.ogg"
+dest_files=["res://.godot/imported/large pellet loop.ogg-94880d0e0cb556296aea2596d06b78dc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

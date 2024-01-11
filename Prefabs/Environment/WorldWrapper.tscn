@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7nhqsarot7x6"]
+
+[ext_resource type="Script" path="res://Prefabs/Environment/WorldWrapper.gd" id="1_1mxlv"]
+
+[node name="WorldWrapper" type="Node2D"]
+script = ExtResource("1_1mxlv")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dui5thl4tt752"
+path="res://.godot/imported/extra man.ogg-5f5bca8f007a205844683db5d13b89f3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/extra man.ogg"
+dest_files=["res://.godot/imported/extra man.ogg-5f5bca8f007a205844683db5d13b89f3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

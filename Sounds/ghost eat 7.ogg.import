@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b2qfoqxu6pnl7"
+path="res://.godot/imported/ghost eat 7.ogg-8ccda6bc5bd743301307539aa8da9a7b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/ghost eat 7.ogg"
+dest_files=["res://.godot/imported/ghost eat 7.ogg-8ccda6bc5bd743301307539aa8da9a7b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwnac3x0asytg"]
+
+[ext_resource type="Texture2D" uid="uid://cyncnr61xmnkk" path="res://Sprites/Environment/Wall-H.png" id="1_pjot2"]
+
+[node name="Maze" type="Node2D"]
+
+[node name="Wall1" type="Sprite2D" parent="."]
+position = Vector2(80, 74)
+scale = Vector2(20, 1)
+texture = ExtResource("1_pjot2")
+
+[node name="Wall2" type="Sprite2D" parent="."]
+position = Vector2(80, 95)
+scale = Vector2(20, 1)
+texture = ExtResource("1_pjot2")
