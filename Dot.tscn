@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://mjcq43gth800"]
+
+[ext_resource type="Script" path="res://Prefabs/Environment/Dot.gd" id="1_8iswl"]
+[ext_resource type="Texture2D" uid="uid://oj2b6ph1pmuv" path="res://Sprites/Environment/Dot1.png" id="2_84hru"]
+[ext_resource type="AudioStream" uid="uid://hq3kfkbkqhea" path="res://Sounds/munch A.ogg" id="3_0pgp7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_043q1"]
+radius = 1.2
+
+[node name="Dot" type="Area2D"]
+position = Vector2(11, 84)
+script = ExtResource("1_8iswl")
+
+[node name="DotSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_84hru")
+
+[node name="DotShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_043q1")
+
+[node name="DotSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0pgp7")
