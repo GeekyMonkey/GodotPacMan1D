@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cyx04xlrftc0m" path="res://Prefabs/Ghosts/Ghost.tscn" id="4_cfokc"]
 [ext_resource type="Script" path="res://Prefabs/UI/GameText.gd" id="5_q48uu"]
 [ext_resource type="Theme" uid="uid://cb6vq0pot0swv" path="res://Theme.tres" id="5_qhuy8"]
-[ext_resource type="PackedScene" uid="uid://mjcq43gth800" path="res://Dot.tscn" id="6_dcnn7"]
+[ext_resource type="PackedScene" uid="uid://mjcq43gth800" path="res://Prefabs/Environment/Dot.tscn" id="6_dcnn7"]
 
 [node name="GameScene" type="Node2D"]
 
@@ -43,3 +43,15 @@ theme = ExtResource("5_qhuy8")
 text = "0	"
 
 [node name="Dot" parent="." instance=ExtResource("6_dcnn7")]
+
+[node name="Dot2" parent="." instance=ExtResource("6_dcnn7")]
+position = Vector2(3, 84)
+
+[node name="Dot3" parent="." instance=ExtResource("6_dcnn7")]
+position = Vector2(56, 84)
+
+[node name="Dot4" parent="." instance=ExtResource("6_dcnn7")]
+position = Vector2(45, 84)
+
+[node name="Dot5" parent="." instance=ExtResource("6_dcnn7")]
+position = Vector2(20, 84)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c6m57chxuwjyx"]
+[gd_scene load_steps=23 format=3 uid="uid://c6m57chxuwjyx"]
 
 [ext_resource type="Script" path="res://Prefabs/Player/Player.gd" id="1_8ld4n"]
 [ext_resource type="Texture2D" uid="uid://1fljdft7r6wy" path="res://Sprites/Player/Death0.png" id="2_hdupf"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://78rk6bf51amm" path="res://Sprites/Player/R1.png" id="17_d0w2v"]
 [ext_resource type="Texture2D" uid="uid://3s2iapmdhqc0" path="res://Sprites/Player/R2.png" id="18_8o4gg"]
 [ext_resource type="PackedScene" uid="uid://b7nhqsarot7x6" path="res://Prefabs/Environment/WorldWrapper.tscn" id="19_7t7om"]
+[ext_resource type="AudioStream" uid="uid://hq3kfkbkqhea" path="res://Sounds/munch A.ogg" id="20_dojoa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fwoy2"]
 animations = [{
@@ -123,3 +124,6 @@ shape = SubResource("CircleShape2D_ih7fx")
 
 [node name="WorldWrapper" parent="." instance=ExtResource("19_7t7om")]
 position = Vector2(-65, -84)
+
+[node name="PlayerSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_dojoa")
