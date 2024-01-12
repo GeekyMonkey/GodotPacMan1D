@@ -16,6 +16,12 @@ config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://Sprites/Player/R2.png"
 
+[autoload]
+
+GameEvents="*res://Globals/GameEvents.gd"
+XDelay="*res://Globals/DelayExtensions.gd"
+GameState="*res://Globals/GameStateClass.gd"
+
 [display]
 
 window/size/viewport_width=160
