@@ -1,0 +1,165 @@
+[gd_scene load_steps=26 format=3 uid="uid://cyx04xlrftc0m"]
+
+[ext_resource type="Script" path="res://Prefabs/Ghosts/Ghost.gd" id="1_6hr1k"]
+[ext_resource type="Texture2D" uid="uid://dnh4d5okhtaej" path="res://Sprites/Ghosts/BlinkyL1.png" id="1_p3elh"]
+[ext_resource type="Texture2D" uid="uid://uqcqrd7tswo3" path="res://Sprites/Ghosts/Afraid2.png" id="3_rjv1k"]
+[ext_resource type="Texture2D" uid="uid://ww2ld1xwujwt" path="res://Sprites/Ghosts/Afraid1.png" id="4_47uod"]
+[ext_resource type="Texture2D" uid="uid://jmoxgpmkj886" path="res://Sprites/Ghosts/Afraid3.png" id="5_lifid"]
+[ext_resource type="Texture2D" uid="uid://c58yt2ytvog2l" path="res://Sprites/Ghosts/Afraid4.png" id="6_o5wn7"]
+[ext_resource type="Texture2D" uid="uid://clbd0qa627e7s" path="res://Sprites/Ghosts/BlinkyL2.png" id="7_0tcml"]
+[ext_resource type="Texture2D" uid="uid://cwinnxt3uv2ku" path="res://Sprites/Ghosts/BlinkyR1.png" id="8_xwarm"]
+[ext_resource type="Texture2D" uid="uid://b8qwumm74p2n4" path="res://Sprites/Ghosts/BlinkyR2.png" id="9_rj04f"]
+[ext_resource type="Texture2D" uid="uid://f5e2qfd2ql6p" path="res://Sprites/Ghosts/ClydeL1.png" id="10_oxnqb"]
+[ext_resource type="Texture2D" uid="uid://c2iq6uupodjqo" path="res://Sprites/Ghosts/ClydeL2.png" id="11_om21d"]
+[ext_resource type="Texture2D" uid="uid://djhbug2xfq2ll" path="res://Sprites/Ghosts/ClydeR1.png" id="12_h7dw2"]
+[ext_resource type="Texture2D" uid="uid://dax4ftkjobyte" path="res://Sprites/Ghosts/ClydeR2.png" id="13_p6o1p"]
+[ext_resource type="Texture2D" uid="uid://cmmmp0a0hsttf" path="res://Sprites/Ghosts/EyesL.png" id="14_vrt53"]
+[ext_resource type="Texture2D" uid="uid://b0xq6sog7s5dj" path="res://Sprites/Ghosts/EyesR.png" id="15_cwx55"]
+[ext_resource type="Texture2D" uid="uid://c133qkglbmje8" path="res://Sprites/Ghosts/InkyL1.png" id="16_tgurh"]
+[ext_resource type="Texture2D" uid="uid://dvqr8rp5ok1cw" path="res://Sprites/Ghosts/InkyL2.png" id="17_ovbrf"]
+[ext_resource type="Texture2D" uid="uid://nlc3pd3b4kkg" path="res://Sprites/Ghosts/InkyR1.png" id="18_dsyn7"]
+[ext_resource type="Texture2D" uid="uid://do7t1ikfper57" path="res://Sprites/Ghosts/InkyR2.png" id="19_4f82m"]
+[ext_resource type="Texture2D" uid="uid://b2rg5rekbo742" path="res://Sprites/Ghosts/PinkyL1.png" id="20_e558m"]
+[ext_resource type="Texture2D" uid="uid://cv2sawgnntabp" path="res://Sprites/Ghosts/PinkyL2.png" id="21_3ou7q"]
+[ext_resource type="Texture2D" uid="uid://ccyrfqygvwrdn" path="res://Sprites/Ghosts/PinkyR1.png" id="22_upg21"]
+[ext_resource type="Texture2D" uid="uid://grf4ntkbqb2j" path="res://Sprites/Ghosts/PinkyR2.png" id="23_pgeax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxeqx"]
+size = Vector2(14, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4pa74"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rjv1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_47uod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lifid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o5wn7")
+}],
+"loop": true,
+"name": &"Afraid",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p3elh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tcml")
+}],
+"loop": true,
+"name": &"BlinkyL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xwarm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rj04f")
+}],
+"loop": true,
+"name": &"BlinkyR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_oxnqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_om21d")
+}],
+"loop": true,
+"name": &"ClydeL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_h7dw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_p6o1p")
+}],
+"loop": true,
+"name": &"ClydeR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_vrt53")
+}],
+"loop": true,
+"name": &"EyesL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_cwx55")
+}],
+"loop": true,
+"name": &"EyesR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_tgurh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ovbrf")
+}],
+"loop": true,
+"name": &"InkyL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_dsyn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4f82m")
+}],
+"loop": true,
+"name": &"InkyR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_e558m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_3ou7q")
+}],
+"loop": true,
+"name": &"PinkyL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_upg21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pgeax")
+}],
+"loop": true,
+"name": &"PinkyR",
+"speed": 5.0
+}]
+
+[node name="Ghost" type="Area2D"]
+position = Vector2(96, 85)
+script = ExtResource("1_6hr1k")
+
+[node name="GhostShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sxeqx")
+
+[node name="GhostSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4pa74")
+animation = &"BlinkyL"
+autoplay = "BlinkyL"
+frame_progress = 0.841119

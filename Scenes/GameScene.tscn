@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://cwnac3x0asytg" path="res://Prefabs/Environment/maze.tscn" id="1_ncug6"]
 [ext_resource type="Texture2D" uid="uid://oj2b6ph1pmuv" path="res://Sprites/Environment/Dot1.png" id="2_h7dss"]
-[ext_resource type="Texture2D" uid="uid://dnh4d5okhtaej" path="res://Sprites/Ghosts/BlinkyL1.png" id="3_em8dl"]
 [ext_resource type="PackedScene" uid="uid://c6m57chxuwjyx" path="res://Prefabs/Player/Player.tscn" id="4_burwf"]
+[ext_resource type="PackedScene" uid="uid://cyx04xlrftc0m" path="res://Prefabs/Ghosts/Ghost.tscn" id="4_cfokc"]
 
 [node name="GameScene" type="Node2D"]
 
@@ -13,8 +13,6 @@
 position = Vector2(11, 84)
 texture = ExtResource("2_h7dss")
 
-[node name="BlinkyL1" type="Sprite2D" parent="."]
-position = Vector2(96, 85)
-texture = ExtResource("3_em8dl")
-
 [node name="Player" parent="." instance=ExtResource("4_burwf")]
+
+[node name="Ghost" parent="." instance=ExtResource("4_cfokc")]
