@@ -11,7 +11,9 @@ var DirectionX: int = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	GameEvents.PlayerDied.connect(func():
+		player_sprite.animation = "PlayerDeath"
+	)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,9 +27,10 @@ func _process(_delta: float) -> void:
 
 # Called every physics frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	position.x += Speed * DirectionX * delta
-	if DirectionX == 1:
-		player_sprite.animation = "PlayerR"
-	else:
-		player_sprite.animation = "PlayerL"
+	if GameState.Playing:
+		position.x += Speed * DirectionX * delta
+		if DirectionX == 1:
+			player_sprite.animation = "PlayerR"
+		else:
+			player_sprite.animation = "PlayerL"
 

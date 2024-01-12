@@ -23,7 +23,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x += Direction * Speed * delta
+	if GameState.Playing:
+		position.x += Direction * Speed * delta
 
 # Called every physics frame
 func _physics_process(_delta: float) -> void:
@@ -41,6 +42,12 @@ func ChooseGhostName() -> void:
 # Find the player
 func FindPlayer() -> void:
 	Target = get_tree().get_first_node_in_group("Player")
+
+	# Watch for collision with player
+	area_entered.connect(func(other: Node2D) -> void:
+		if other.is_in_group("Player"):
+			GameState.GhostHitPlayer()
+	)
 
 # Decide which animation to play
 func SetAnimation() -> void:

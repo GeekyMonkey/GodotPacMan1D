@@ -162,4 +162,4 @@ shape = SubResource("RectangleShape2D_sxeqx")
 sprite_frames = SubResource("SpriteFrames_4pa74")
 animation = &"BlinkyL"
 autoplay = "BlinkyL"
-frame_progress = 0.841119
+frame_progress = 0.21276

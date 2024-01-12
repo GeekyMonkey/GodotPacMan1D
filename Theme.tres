@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cb6vq0pot0swv"]
+
+[ext_resource type="FontFile" uid="uid://cfyeqgefx8t1t" path="res://Sprites/PacManFont/emulogic.ttf" id="1_8wyni"]
+
+[resource]
+default_font = ExtResource("1_8wyni")
+default_font_size = 8

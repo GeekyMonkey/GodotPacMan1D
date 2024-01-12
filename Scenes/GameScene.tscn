@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckpcyqttt0qx8"]
+[gd_scene load_steps=7 format=3 uid="uid://ckpcyqttt0qx8"]
 
 [ext_resource type="PackedScene" uid="uid://cwnac3x0asytg" path="res://Prefabs/Environment/maze.tscn" id="1_ncug6"]
 [ext_resource type="Texture2D" uid="uid://oj2b6ph1pmuv" path="res://Sprites/Environment/Dot1.png" id="2_h7dss"]
 [ext_resource type="PackedScene" uid="uid://c6m57chxuwjyx" path="res://Prefabs/Player/Player.tscn" id="4_burwf"]
 [ext_resource type="PackedScene" uid="uid://cyx04xlrftc0m" path="res://Prefabs/Ghosts/Ghost.tscn" id="4_cfokc"]
+[ext_resource type="Script" path="res://Scenes/GameText.gd" id="5_q48uu"]
+[ext_resource type="Theme" uid="uid://cb6vq0pot0swv" path="res://Theme.tres" id="5_qhuy8"]
 
 [node name="GameScene" type="Node2D"]
 
@@ -14,5 +16,32 @@ position = Vector2(11, 84)
 texture = ExtResource("2_h7dss")
 
 [node name="Player" parent="." instance=ExtResource("4_burwf")]
+position = Vector2(30, 84)
 
 [node name="Ghost" parent="." instance=ExtResource("4_cfokc")]
+position = Vector2(151, 85)
+
+[node name="GameText" type="CanvasLayer" parent="."]
+script = ExtResource("5_q48uu")
+
+[node name="ScoreLabel" type="RichTextLabel" parent="GameText"]
+clip_contents = false
+custom_minimum_size = Vector2(50, 20)
+offset_left = 2.0
+offset_top = 47.0
+offset_right = 52.0
+offset_bottom = 67.0
+size_flags_horizontal = 3
+theme = ExtResource("5_qhuy8")
+text = "SCORE:"
+
+[node name="ScoreValue" type="RichTextLabel" parent="GameText"]
+clip_contents = false
+custom_minimum_size = Vector2(50, 20)
+offset_left = 50.0
+offset_top = 47.0
+offset_right = 100.0
+offset_bottom = 67.0
+size_flags_horizontal = 3
+theme = ExtResource("5_qhuy8")
+text = "0	"
