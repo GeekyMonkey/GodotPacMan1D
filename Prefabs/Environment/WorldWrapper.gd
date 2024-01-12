@@ -3,7 +3,7 @@
 class_name WorldWrapper
 extends Node2D
 
-var WorldWidth: int
+var WorldWidth: float
 var ParentObject: Node2D
 
 
