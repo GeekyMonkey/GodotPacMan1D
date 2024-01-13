@@ -3,6 +3,7 @@ class_name GameText
 extends CanvasLayer
 
 @onready var score_value: RichTextLabel = $ScoreValue
+@onready var hi_value: RichTextLabel = $HiValue
 @onready var start_label: RichTextLabel = $StartLabel
 
 
@@ -14,6 +15,7 @@ func _ready() -> void:
 
 func OnScoreChanged(score: int) -> void:
 	score_value.text = str(score)
+	hi_value.text = str(GameState.HighScore)
 
 func OnGameEnded() -> void:
 	start_label.visible = true

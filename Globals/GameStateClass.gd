@@ -3,6 +3,7 @@ class_name GameStateClass
 extends Node
 
 @export var Score: int = 0
+@export var HighScore: int = 0
 @export var Playing: bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -28,6 +29,8 @@ func StartGame() -> void:
 
 func AddPoints(points: int) -> void :
 	Score += points
+	if Score > HighScore:
+		HighScore = Score
 	GameEvents.ScoreChanged.emit(Score)
 
 func GhostHitPlayer() -> void:

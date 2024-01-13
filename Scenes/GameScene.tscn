@@ -24,24 +24,45 @@ script = ExtResource("5_q48uu")
 clip_contents = false
 custom_minimum_size = Vector2(50, 20)
 offset_left = 2.0
-offset_top = 47.0
+offset_top = 7.0
 offset_right = 52.0
-offset_bottom = 67.0
+offset_bottom = 27.0
 size_flags_horizontal = 3
 theme = ExtResource("5_qhuy8")
 text = "SCORE:"
+
+[node name="HiLabel" type="RichTextLabel" parent="GameText"]
+clip_contents = false
+custom_minimum_size = Vector2(50, 20)
+offset_left = 84.0
+offset_top = 7.0
+offset_right = 134.0
+offset_bottom = 27.0
+size_flags_horizontal = 3
+theme = ExtResource("5_qhuy8")
+text = "HI:"
 
 [node name="ScoreValue" type="RichTextLabel" parent="GameText"]
 clip_contents = false
 custom_minimum_size = Vector2(50, 20)
 offset_left = 50.0
-offset_top = 47.0
+offset_top = 7.0
 offset_right = 100.0
-offset_bottom = 67.0
+offset_bottom = 27.0
 size_flags_horizontal = 3
 theme = ExtResource("5_qhuy8")
 text = "0	"
 
+[node name="HiValue" type="RichTextLabel" parent="GameText"]
+clip_contents = false
+custom_minimum_size = Vector2(50, 20)
+offset_left = 108.0
+offset_top = 7.0
+offset_right = 158.0
+offset_bottom = 27.0
+size_flags_horizontal = 3
+theme = ExtResource("5_qhuy8")
+text = "0	"
 
 [node name="StartLabel" type="RichTextLabel" parent="GameText"]
 clip_contents = false
