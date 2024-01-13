@@ -42,6 +42,26 @@ size_flags_horizontal = 3
 theme = ExtResource("5_qhuy8")
 text = "0	"
 
+
+[node name="StartLabel" type="RichTextLabel" parent="GameText"]
+clip_contents = false
+custom_minimum_size = Vector2(160, 20)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -20.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+theme = ExtResource("5_qhuy8")
+bbcode_enabled = true
+text = "[center]TAP TO START[/center]"
+fit_content = true
+
 [node name="Dot" parent="." instance=ExtResource("6_dcnn7")]
 
 [node name="Dot2" parent="." instance=ExtResource("6_dcnn7")]

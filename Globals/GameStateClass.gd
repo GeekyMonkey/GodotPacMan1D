@@ -11,9 +11,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("Turn"):
+		if Playing == false:
+			StartGame()
 
 func StartGame() -> void:
+	get_tree().reload_current_scene()
+
+	await XDelay.NextFrame()
+
 	Score = 0
 	GameEvents.ScoreChanged.emit(Score)
 
