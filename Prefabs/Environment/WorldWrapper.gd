@@ -6,6 +6,7 @@ extends Node2D
 var WorldWidth: float
 var ParentObject: Node2D
 
+@export var Enabled: bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +16,13 @@ func _ready() -> void:
 # Test if the object should be teleported
 func _physics_process(_delta: float) -> void:
 	if ParentObject.global_position.x < 0:
-		ParentObject.global_position.x = WorldWidth
+		if Enabled:
+			ParentObject.global_position.x = WorldWidth
+		else:
+			ParentObject.global_position.x = 0
 	elif ParentObject.global_position.x > WorldWidth:
-		ParentObject.global_position.x = 0
+		if Enabled:
+			ParentObject.global_position.x = 0
+		else:
+			ParentObject.global_position.x = WorldWidth
 

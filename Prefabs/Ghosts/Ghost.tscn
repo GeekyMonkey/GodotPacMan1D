@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cyx04xlrftc0m"]
+[gd_scene load_steps=28 format=3 uid="uid://cyx04xlrftc0m"]
 
 [ext_resource type="Script" path="res://Prefabs/Ghosts/Ghost.gd" id="1_6hr1k"]
 [ext_resource type="Texture2D" uid="uid://dnh4d5okhtaej" path="res://Sprites/Ghosts/BlinkyL1.png" id="1_p3elh"]
@@ -23,6 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://cv2sawgnntabp" path="res://Sprites/Ghosts/PinkyL2.png" id="21_3ou7q"]
 [ext_resource type="Texture2D" uid="uid://ccyrfqygvwrdn" path="res://Sprites/Ghosts/PinkyR1.png" id="22_upg21"]
 [ext_resource type="Texture2D" uid="uid://grf4ntkbqb2j" path="res://Sprites/Ghosts/PinkyR2.png" id="23_pgeax"]
+[ext_resource type="PackedScene" uid="uid://b7nhqsarot7x6" path="res://Prefabs/Environment/WorldWrapper.tscn" id="24_4y7v2"]
+[ext_resource type="AudioStream" uid="uid://b2qfoqxu6pnl7" path="res://Sounds/ghost eat 7.ogg" id="25_ceopl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxeqx"]
 size = Vector2(14, 14)
@@ -163,3 +165,9 @@ sprite_frames = SubResource("SpriteFrames_4pa74")
 animation = &"BlinkyL"
 autoplay = "BlinkyL"
 frame_progress = 0.21276
+
+[node name="WorldWrapper" parent="." instance=ExtResource("24_4y7v2")]
+Enabled = false
+
+[node name="GhostSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("25_ceopl")

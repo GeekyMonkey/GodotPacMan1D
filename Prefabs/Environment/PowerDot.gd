@@ -1,11 +1,7 @@
-class_name PowerDot
+class_name Dot
 
 extends Area2D
-
 @onready var dot_sprite: Sprite2D = $DotSprite
-
-@export var IsPowerDot: bool = false
-@export var Points: int = 10
 
 var DotActive: bool = true
 
@@ -16,14 +12,10 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	pass
 
 func OnCollision(other: Node2D) -> void:
 	if other.is_in_group("Player"):
-		GameState.AddPoints(Points)
-
-		if IsPowerDot:
-			GameState.PowerDotEaten()
-
+		GameState.AddPoints(1)
 		queue_free()

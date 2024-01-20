@@ -7,7 +7,6 @@
 radius = 1.2
 
 [node name="Dot" type="Area2D" groups=["Dots"]]
-position = Vector2(11, 84)
 script = ExtResource("1_8iswl")
 
 [node name="DotSprite" type="Sprite2D" parent="."]

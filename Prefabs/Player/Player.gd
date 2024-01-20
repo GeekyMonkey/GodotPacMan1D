@@ -9,8 +9,8 @@ var DirectionX: int = 1
 @onready var player_sprite: AnimatedSprite2D = $PlayerSprite
 @onready var player_sound: AudioStreamPlayer2D = $PlayerSound
 const DeathSound = preload("res://Sounds/death 1.ogg")
-const DotSoundA = preload("res://Sounds/munch A.ogg")
 const DotSoundB = preload("res://Sounds/munch B.ogg")
+const DotSoundA = preload("res://Sounds/munch A.ogg")
 var DotSound = DotSoundA
 
 # Called when the node enters the scene tree for the first time.

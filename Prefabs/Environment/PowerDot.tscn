@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://bu5ud4gdciwqm"]
+
+[ext_resource type="Script" path="res://Prefabs/Environment/Dot.gd" id="1_c0we7"]
+[ext_resource type="Texture2D" uid="uid://oj2b6ph1pmuv" path="res://Sprites/Environment/Dot1.png" id="2_dq6hk"]
+[ext_resource type="Texture2D" uid="uid://bigplnikyrfw8" path="res://Sprites/Environment/Dot2.png" id="3_ftwt2"]
+[ext_resource type="Texture2D" uid="uid://bjvobk1h7o2t3" path="res://Sprites/Environment/Dot3.png" id="4_qbgib"]
+[ext_resource type="Texture2D" uid="uid://vyy30373xgj0" path="res://Sprites/Empty.png" id="5_goimm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_043q1"]
+radius = 1.2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pmbw1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ftwt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qbgib")
+}],
+"loop": true,
+"name": &"SmallBig",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ftwt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_goimm")
+}],
+"loop": true,
+"name": &"SmallNone",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ftwt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dq6hk")
+}],
+"loop": true,
+"name": &"SmallTiny",
+"speed": 3.0
+}]
+
+[node name="PowerDot" type="Area2D" groups=["Dots"]]
+script = ExtResource("1_c0we7")
+IsPowerDot = true
+
+[node name="DotSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_dq6hk")
+
+[node name="DotShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_043q1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pmbw1")
+animation = &"SmallBig"
+autoplay = "SmallBig"
