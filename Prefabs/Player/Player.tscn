@@ -106,7 +106,7 @@ animations = [{
 custom_solver_bias = 1.0
 radius = 6.5
 
-[node name="Player" type="Area2D" groups=["Player"]]
+[node name="Player" type="Area2D" groups=["Players"]]
 position = Vector2(65, 84)
 script = ExtResource("1_8ld4n")
 Speed = 50.0

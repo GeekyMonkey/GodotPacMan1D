@@ -29,6 +29,12 @@ window/size/viewport_height=160
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
+[global_group]
+
+Ghosts="Evil, but delicious"
+Dots="Regular + Power"
+Players="Our heroes"
+
 [input]
 
 Turn={

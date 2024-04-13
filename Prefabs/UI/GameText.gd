@@ -13,6 +13,10 @@ func _ready() -> void:
 	start_label.visible = false
 	GameEvents.GameEnded.connect(OnGameEnded)
 
+	# Update the text on level scene change
+	score_value.text = str(GameState.Score)
+	hi_value.text = str(GameState.HighScore)
+
 func OnScoreChanged(score: int) -> void:
 	score_value.text = str(score)
 	hi_value.text = str(GameState.HighScore)

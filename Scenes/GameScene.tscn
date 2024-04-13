@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckpcyqttt0qx8"]
+[gd_scene load_steps=9 format=3 uid="uid://ckpcyqttt0qx8"]
 
+[ext_resource type="Script" path="res://Scenes/GameScene.gd" id="1_ekdeq"]
 [ext_resource type="PackedScene" uid="uid://cwnac3x0asytg" path="res://Prefabs/Environment/maze.tscn" id="1_ncug6"]
 [ext_resource type="PackedScene" uid="uid://c6m57chxuwjyx" path="res://Prefabs/Player/Player.tscn" id="4_burwf"]
 [ext_resource type="PackedScene" uid="uid://cyx04xlrftc0m" path="res://Prefabs/Ghosts/Ghost.tscn" id="4_cfokc"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bu5ud4gdciwqm" path="res://Prefabs/Environment/PowerDot.tscn" id="7_drom8"]
 
 [node name="GameScene" type="Node2D"]
+script = ExtResource("1_ekdeq")
 
 [node name="GameText" type="CanvasLayer" parent="."]
 script = ExtResource("5_q48uu")

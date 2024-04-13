@@ -46,7 +46,9 @@ func _physics_process(delta: float) -> void:
 			queue_free()
 		return
 
-	if Target.global_position.x > global_position.x:
+	if not Target:
+		Direction = 0
+	elif Target.global_position.x > global_position.x:
 		Direction = 1
 	else:
 		Direction = -1
@@ -67,11 +69,11 @@ func ChooseGhostName() -> void:
 
 # Find the player
 func FindPlayer() -> void:
-	Target = get_tree().get_first_node_in_group("Player")
+	Target = get_tree().get_first_node_in_group("Players")
 
 	# Watch for collision with player
 	area_entered.connect(func(other: Node2D) -> void:
-		if other.is_in_group("Player"):
+		if other.is_in_group("Players"):
 			if Afraid:
 				GameState.PlayerHitGhost(self)
 				Die()

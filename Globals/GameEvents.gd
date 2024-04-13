@@ -11,3 +11,5 @@ signal GameEnded()
 signal PlayerDied()
 
 signal PowerModeChanged(power: bool)
+
+signal LevelComplete()

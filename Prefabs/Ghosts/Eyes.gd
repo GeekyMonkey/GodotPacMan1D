@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 
 # Find the player
 func FindPlayer() -> void:
-	Target = get_tree().get_first_node_in_group("Player")
+	Target = get_tree().get_first_node_in_group("Players")
 
 # Decide which animation to play
 func SetAnimation() -> void:

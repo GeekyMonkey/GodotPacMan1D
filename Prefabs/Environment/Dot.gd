@@ -20,10 +20,12 @@ func _process(_delta: float) -> void:
 	pass
 
 func OnCollision(other: Node2D) -> void:
-	if other.is_in_group("Player"):
+	if other.is_in_group("Players"):
 		GameState.AddPoints(Points)
 
 		if IsPowerDot:
 			GameState.PowerDotEaten()
+		else:
+			GameState.DotEaten()
 
 		queue_free()

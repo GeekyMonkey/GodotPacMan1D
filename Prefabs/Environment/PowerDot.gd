@@ -16,6 +16,6 @@ func _process(delta: float) -> void:
 	pass
 
 func OnCollision(other: Node2D) -> void:
-	if other.is_in_group("Player"):
+	if other.is_in_group("Players"):
 		GameState.AddPoints(1)
 		queue_free()
